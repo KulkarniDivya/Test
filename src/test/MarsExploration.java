@@ -18,8 +18,19 @@ public class MarsExploration {
 		char[] ch = s.toCharArray();
 		
 		for (int i = 0; i < ch.length; i++) {
-			if( i%3 !=1 && ch[i] != 'S')
+			if( i%3 !=1 && ch[i] != 'S' )
+			{
+				if(i > 3) {
+					if( ch[i-2] != 'S')
+					{
+						break;
+					}
+				}
+				
 				n++;
+				
+			}
+				
 			else if( i%3 ==1 && ch[i] !='O')
 				n++;
 		}
